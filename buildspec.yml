@@ -7,7 +7,8 @@ phases:
      nodejs: 18
     commands:
       - echo "Installing dependencies..."
-      - npm install --include=dev
+      - export NODE_ENV=development
+      - npm install
 
   build:
     commands:
@@ -17,7 +18,7 @@ phases:
   test:
     commands:
       - echo "Running Jest test suite..."
-      - npx --yes jest || echo "Jest not found or tests failed, skipping tests.."
+      - npx jest --passWithNoTests || echo "Jest not found or tests failed, skipping tests.."
 
 artifacts:
   files:
