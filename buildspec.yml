@@ -9,6 +9,7 @@ phases:
       - echo "Installing dependencies..."
       - export NODE_ENV=development
       - npm install
+      - npm install --save-dev jest
 
   build:
     commands:
