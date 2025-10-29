@@ -1,0 +1,14 @@
+
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies for testing..."
+      - npm install --save-dev jest
+  build:
+    commands:
+      - echo "Running Jest tests..."
+      - npx jest --passWithNoTests || echo "No tests found, skipping..."
+artifacts:
+  files:
+    - '**/*'

@@ -3,23 +3,14 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-     nodejs: 18
-    commands:
+   commands:
       - echo "Installing dependencies..."
-      - export NODE_ENV=development
       - npm install
-      - npm install --save-dev jest
 
   build:
     commands:
       - echo "Building the Node.js application..."
       - npm run build || echo "No explicit build script found, continuing..."
-
-  test:
-    commands:
-      - echo "Running Jest test suite..."
-      - npx jest --passWithNoTests || echo "Jest not found or tests failed, skipping tests.."
 
 artifacts:
   files:
