@@ -15,7 +15,7 @@ phases:
   test:
     commands:
       - echo "Running Jest test suite..."
-      - npm test || echo "Tests failed but continuing for demonstration"
+      - npm test
 
 artifacts:
   files:
