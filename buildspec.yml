@@ -17,7 +17,7 @@ phases:
   test:
     commands:
       - echo "Running Jest test suite..."
-      - npx jest || echo "Jest not found or tests failed, skipping tests.."
+      - npx --yes jest || echo "Jest not found or tests failed, skipping tests.."
 
 artifacts:
   files:
